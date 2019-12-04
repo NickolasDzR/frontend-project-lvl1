@@ -1,10 +1,10 @@
 {
   "name": "nikolyae2019",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "frontend-project",
   "main": "dist/index.js",
   "bin": {
-    "brain-games": "./src/bin/brain-games.js"
+    "brain-games": "./dist/bin/brain-games.js"
   },
   "files": [
     "dist"
@@ -31,6 +31,7 @@
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.4",
-    "@babel/preset-env": "^7.7.4"
+    "@babel/preset-env": "^7.7.4",
+    "readline-sync": "^1.4.10"
   }
 }
