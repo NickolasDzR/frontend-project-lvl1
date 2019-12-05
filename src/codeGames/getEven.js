@@ -1,3 +1,4 @@
+import startTheGame from '..';
 import randomNumber from "../codeGames/randomNumber";
 
 const getTheRightAnswer = () => {
@@ -7,5 +8,4 @@ const getTheRightAnswer = () => {
     }
     return [number, 'no'];
 }
-
-export default getTheRightAnswer;
+export default () => startTheGame(getTheRightAnswer);

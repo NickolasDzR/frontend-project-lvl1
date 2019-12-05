@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync';
-import getTheRightAnswer from './codeGames/getEven';
 
-const startTheGame = () => {
+const startTheGame = (getTheRightAnswer) => {
   console.log('Welcome to the brain-games!');
   console.log(`Answer "yes" if the number is even, otherwise answer "no".\n`)
   const actual = readlineSync.question('May i have your name? ');
@@ -9,9 +8,14 @@ const startTheGame = () => {
   for (let i = 1; i <= 3; i += 1) {
     const [randomNum, theAnswer] = getTheRightAnswer();
     console.log(`Question: ${randomNum}`);
-    const userAnswer = readlineSync.question(`Your answer `);
+    const userAnswer = readlineSync.question(`Your answer: `);
     if (userAnswer != theAnswer) {
-      return console.log(`This is wrong aswer`);
+      if (userAnswer != 'yes') {
+        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was 'yes'.`)
+        return console.log(`Let's try again, ${actual}!`);
+      }
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was 'no'.`)
+      return console.log(`Let's try again, ${actual}!`);
     }
     console.log('Correct!')
   }
