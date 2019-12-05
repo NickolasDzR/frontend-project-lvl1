@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import checkTheAnswer from '../codeGames/getEven';
 
-checkTheAnswer();
+import getTheRightAnswer from '../codeGames/getEven';
+
+getTheRightAnswer();
