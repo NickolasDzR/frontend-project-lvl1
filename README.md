@@ -10,3 +10,17 @@
 $ make install
 ```
 [![asciicast](https://asciinema.org/a/0OVJmHtE5Wx4ipx96ESDHNjZc.svg)](https://asciinema.org/a/0OVJmHtE5Wx4ipx96ESDHNjZc)
+
+## $brain-even
+
+```sh
+$ brain-even
+```
+[![asciicast](https://asciinema.org/a/0OVJmHtE5Wx4ipx96ESDHNjZc.svg)](https://asciinema.org/a/0OVJmHtE5Wx4ipx96ESDHNjZc)
+
+## $brain-calc
+
+```sh
+$ brain-calc
+```
+[![asciicast](https://asciinema.org/a/axU6SS24INcjoCdMN7cq4RkJV.svg)](https://asciinema.org/a/axU6SS24INcjoCdMN7cq4RkJV)
