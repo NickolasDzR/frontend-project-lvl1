@@ -2,6 +2,7 @@ import startTheGame from '..';
 import randomNumber from './randomNumber';
 
 const randomNumberSmall = () => Math.floor(Math.random() * 3);
+const message = 'What is the result of the expression?';
 
 const indication = () => {
   switch (randomNumberSmall()) {
@@ -15,8 +16,10 @@ const indication = () => {
 };
 
 const getTheRightAnswer = () => {
+
   let firstNumber = randomNumber();
   let secondNumber = randomNumber();
+
   switch (indication()) {
     case '+':
       return [`${firstNumber} + ${secondNumber}`, firstNumber + secondNumber];
@@ -28,4 +31,4 @@ const getTheRightAnswer = () => {
 };
 
 
-export default () => startTheGame(getTheRightAnswer);
+export default () => startTheGame(getTheRightAnswer, message);

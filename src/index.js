@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 
-const startTheGame = (getTheRightAnswer) => {
+const startTheGame = (getTheRightAnswer, message) => {
   console.log('Welcome to the brain-games!');
-  console.log(`Answer "yes" if the number is even, otherwise answer "no".\n`)
+  console.log(`${message}\n`)
   const actual = readlineSync.question('May i have your name? ');
   console.log(`Hello ${actual}!\n`);
   for (let i = 1; i <= 3; i += 1) {
@@ -11,7 +11,7 @@ const startTheGame = (getTheRightAnswer) => {
     const userAnswer = readlineSync.question(`Your answer: `);
     if (userAnswer != theAnswer) {
       if (userAnswer != 'yes') {
-        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was 'yes'.`)
+        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${theAnswer}'.`)
         return console.log(`Let's try again, ${actual}!`);
       }
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was 'no'.`)
