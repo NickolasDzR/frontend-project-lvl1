@@ -1,21 +1,26 @@
 import startTheGame from '..';
-import randomNumber from "../codeGames/randomNumber";
+import randomNumber from './randomNumber';
 
 const randomNumberSmall = () => Math.ceil(Math.random(1) * 10);
 const message = 'What number is missing in the progression?';
 
 const getTheRightAnswer = () => {
+  const firstNumberOfArray = randomNumber();
+  const increaseNumber = randomNumberSmall();
+  const hiddenNumber = randomNumberSmall();
+  const arrayOfNumber = [firstNumberOfArray];
 
-    const firstNumberOfArray = randomNumber();
-    const increaseNumber = randomNumberSmall();
-    const hiddenNumber = randomNumberSmall();
-    let arrayOfNumber = [firstNumberOfArray];
-
-    for (let i = 1; i <= 9; i++) {
-        arrayOfNumber.push(arrayOfNumber[arrayOfNumber.length - 1] + increaseNumber);
+  for (let i = 1; i <= 9; i += 1) {
+    arrayOfNumber.push(arrayOfNumber[arrayOfNumber.length - 1] + increaseNumber);
+  }
+  const takeHiddenNum = () => {
+    if (hiddenNumber === 1) {
+      return arrayOfNumber[hiddenNumber + 1] - (increaseNumber + increaseNumber);
     }
-    arrayOfNumber.splice(hiddenNumber, hiddenNumber, '..')
-    return [arrayOfNumber.join(' '), increaseNumber]
-}
+    return arrayOfNumber[hiddenNumber - 2] + increaseNumber;
+  };
+  arrayOfNumber.splice(hiddenNumber - 1, 1, '..');
+  return [arrayOfNumber.join(' '), takeHiddenNum()];
+};
 
 export default () => startTheGame(getTheRightAnswer, message);

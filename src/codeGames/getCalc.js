@@ -16,9 +16,8 @@ const indication = () => {
 };
 
 const getTheRightAnswer = () => {
-
-  let firstNumber = randomNumber();
-  let secondNumber = randomNumber();
+  const firstNumber = randomNumber();
+  const secondNumber = randomNumber();
 
   switch (indication()) {
     case '+':
