@@ -31,3 +31,10 @@ $ brain-calc
 $ brain-gcd
 ```
 [![asciicast](https://asciinema.org/a/axU6SS24INcjoCdMN7cq4RkJV.svg)](https://asciinema.org/a/axU6SS24INcjoCdMN7cq4RkJV)
+
+## $brain-progression
+
+```sh
+$ brain-progression
+```
+[![asciicast](https://asciinema.org/a/Q56kxA6Z9Tsc5FUkP0wPWcbi6.svg)](https://asciinema.org/a/Q56kxA6Z9Tsc5FUkP0wPWcbi6)
