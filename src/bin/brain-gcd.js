@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getTheRightAnswer from '../codeGames/getGcd';
+import getTheRightAnswer from '../Games/getGcd';
 
 getTheRightAnswer();
