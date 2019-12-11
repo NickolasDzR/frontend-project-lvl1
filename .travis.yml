@@ -1,8 +1,16 @@
-language: 
-    node_js
-node_js:
-  - node
-
-script:
-  - make lint
-  - make test
+{
+  "os": [
+    "linux"
+  ],
+  "dist": "xenial",
+  "group": "stable",
+  "script": [
+    "make lint",
+    "make test"
+  ],
+  ".result": "configured",
+  "node_js": [
+    "node"
+  ],
+  "language": "node_js"
+}
