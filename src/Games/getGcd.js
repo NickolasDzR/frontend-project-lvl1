@@ -1,8 +1,8 @@
 import startTheGame from '..';
-import randomNumber from './randomNumber';
+import randomNumber from '../getRandomNumber/randomNumber';
 
 
-const message = 'Find the greatest common divisor of given numbers.';
+const question = 'Find the greatest common divisor of given numbers.';
 
 const getTheRightAnswer = () => {
   const firstNumber = randomNumber();
@@ -15,4 +15,4 @@ const getTheRightAnswer = () => {
   };
   return smallestDivisor(firstNumber, secondNumber);
 };
-export default () => startTheGame(getTheRightAnswer, message);
+export default () => startTheGame(getTheRightAnswer, question);

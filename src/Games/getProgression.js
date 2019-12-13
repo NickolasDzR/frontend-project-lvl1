@@ -1,8 +1,8 @@
 import startTheGame from '..';
-import randomNumber from './randomNumber';
+import randomNumber from '../getRandomNumber/randomNumber';
 
 const randomNumberSmall = () => Math.ceil(Math.random(1) * 10);
-const message = 'What number is missing in the progression?';
+const question = 'What number is missing in the progression?';
 
 const getTheRightAnswer = () => {
   const firstNumberOfArray = randomNumber();
@@ -23,4 +23,4 @@ const getTheRightAnswer = () => {
   return [arrayOfNumber.join(' '), takeHiddenNum()];
 };
 
-export default () => startTheGame(getTheRightAnswer, message);
+export default () => startTheGame(getTheRightAnswer, question);

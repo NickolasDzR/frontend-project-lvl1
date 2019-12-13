@@ -1,7 +1,7 @@
 import startTheGame from '..';
-import randomNumber from './randomNumber';
+import randomNumber from '../getRandomNumber/randomNumber';
 
-const message = 'What is the result of the expression?';
+const question = 'What is the result of the expression?';
 
 const getTheRightAnswer = () => {
   const firstNumber = randomNumber();
@@ -20,4 +20,4 @@ const getTheRightAnswer = () => {
 };
 
 
-export default () => startTheGame(getTheRightAnswer, message);
+export default () => startTheGame(getTheRightAnswer, question);
