@@ -10,12 +10,12 @@ const checkTheNumberIfEven = (number) => {
     return true;
   }
   return false;
-}
+};
 
 const getTheRightAnswer = () => {
   const number = randomNumber();
   if (checkTheNumberIfEven(number) === true) {
-    return [number, 'yes']
+    return [number, 'yes'];
   }
   return [number, 'no'];
 };

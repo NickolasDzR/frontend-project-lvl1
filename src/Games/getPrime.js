@@ -3,7 +3,7 @@ import randomNumber from '../getRandomNumber/randomNumber';
 
 const question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const checkTheNumberIfPrime = number => {
+const checkTheNumberIfPrime = (number) => {
   let i = 2;
   if (number < i) {
     return false;
@@ -15,12 +15,12 @@ const checkTheNumberIfPrime = number => {
     i += 1;
   }
   return true;
-}
+};
 
 const getTheRightAnswer = () => {
   const number = randomNumber();
   if (checkTheNumberIfPrime(number) === true) {
-    return [number, 'yes']
+    return [number, 'yes'];
   }
   return [number, 'no'];
 };

@@ -6,7 +6,7 @@ const question = 'What is the result of the expression?';
 const getTheRightAnswer = () => {
   const firstNumber = randomNumber();
   const secondNumber = randomNumber();
-  const numerals = ['+', '-', '*']
+  const numerals = ['+', '-', '*'];
   const getOperator = randomNumber() % numerals.length;
   switch (numerals[getOperator]) {
     case '+':
