@@ -14,7 +14,7 @@ const checkTheNumberIfEven = (number) => {
 
 const getTheRightAnswer = () => {
   const number = randomNumber();
-  if (checkTheNumberIfEven(number) === true) {
+  if (checkTheNumberIfEven(number)) {
     return [number, 'yes'];
   }
   return [number, 'no'];

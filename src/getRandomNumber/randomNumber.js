@@ -1,5 +1,2 @@
-const randomNumber = () => {
-  const number = Math.floor((Math.random(1) + 10) * Math.random(1) * 5);
-  return number;
-};
+const randomNumber = () => Math.floor(Math.random() * 100);
 export default randomNumber;

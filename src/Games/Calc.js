@@ -2,13 +2,10 @@ import startTheGame from '..';
 import randomNumber from '../getRandomNumber/randomNumber';
 
 const question = 'What is the result of the expression?';
+const numerals = ['+', '-', '*'];
 
-const getTheRightAnswer = () => {
-  const firstNumber = randomNumber();
-  const secondNumber = randomNumber();
-  const numerals = ['+', '-', '*'];
-  const getOperator = randomNumber() % numerals.length;
-  switch (numerals[getOperator]) {
+const counter = (firstNumber, secondNumber, numOfOperator) => {
+  switch (numerals[numOfOperator]) {
     case '+':
       return [`${firstNumber} + ${secondNumber}`, firstNumber + secondNumber];
     case '-':
@@ -18,6 +15,13 @@ const getTheRightAnswer = () => {
     default:
       return false;
   }
+};
+
+const getTheRightAnswer = () => {
+  const firstNumber = randomNumber();
+  const secondNumber = randomNumber();
+  const getOperator = randomNumber() % numerals.length;
+  return counter(firstNumber, secondNumber, getOperator);
 };
 
 

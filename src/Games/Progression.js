@@ -3,14 +3,18 @@ import randomNumber from '../getRandomNumber/randomNumber';
 
 const randomNumberSmall = () => Math.ceil(Math.random(1) * 10);
 const question = 'What number is missing in the progression?';
+const aProgressionLenght = 8;
 
 const getTheRightAnswer = () => {
   const firstNumberOfArray = randomNumber();
   const increaseNumber = randomNumberSmall();
   const hiddenNumber = randomNumberSmall();
-  const arrayOfNumber = [firstNumberOfArray];
+  const arrayOfNumber = [];
 
-  for (let i = 1; i <= 9; i += 1) {
+  for (let i = 0; i < aProgressionLenght; i += 1) {
+    if (i === 0) {
+      arrayOfNumber.push(firstNumberOfArray);
+    }
     arrayOfNumber.push(arrayOfNumber[arrayOfNumber.length - 1] + increaseNumber);
   }
   const takeHiddenNum = () => {
