@@ -4,19 +4,22 @@ import randomNumber from '../getRandomNumber/randomNumber';
 
 const question = 'Find the greatest common divisor of given numbers.';
 
-const greatestCommonDivisor = (firstNumber, secondNumber) => {
+const isGcd = (firstNumber, secondNumber) => {
   const finderDivisor = (nOne, nTwo) => {
     if (nTwo === 0) {
       return nOne;
     }
     return finderDivisor(nTwo, nOne % nTwo);
   };
-  return [`${firstNumber} ${secondNumber}`, finderDivisor(firstNumber, secondNumber)];
+  return finderDivisor(firstNumber, secondNumber);
 };
 
 const getTheRightAnswer = () => {
   const firstNumber = randomNumber();
   const secondNumber = randomNumber();
-  return greatestCommonDivisor(firstNumber, secondNumber);
+  const question = `${firstNumber} ${secondNumber}`;
+  const answer = isGcd(firstNumber, secondNumber);
+  return [question, answer];
 };
 export default () => startTheGame(getTheRightAnswer, question);
+// [`${firstNumber} ${secondNumber}`, 

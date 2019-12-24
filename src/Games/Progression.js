@@ -1,7 +1,11 @@
 import startTheGame from '..';
 import randomNumber from '../getRandomNumber/randomNumber';
 
-const randomNumberSmall = () => Math.ceil(Math.random(1) * 10);
+
+const hideNumberFrom = 1;
+const hideNumberTo = 10;
+const randomNumberSmall = () => Math.ceil(Math.random(hideNumberFrom) * hideNumberTo);
+
 const question = 'What number is missing in the progression?';
 const aProgressionLenght = 8;
 

@@ -5,18 +5,11 @@ import randomNumber from '../getRandomNumber/randomNumber';
 const question = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 
-const checkTheNumberIfEven = (number) => {
-  if (number % 2 === 0) {
-    return true;
-  }
-  return false;
-};
+const isEven = number => number % 2 === 0;
 
 const getTheRightAnswer = () => {
   const number = randomNumber();
-  if (checkTheNumberIfEven(number)) {
-    return [number, 'yes'];
-  }
-  return [number, 'no'];
+  const answer = isEven(number) ? [number, 'yes'] : [number, 'no'];
+  return answer;
 };
 export default () => startTheGame(getTheRightAnswer, question);
