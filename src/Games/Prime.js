@@ -1,7 +1,7 @@
 import startTheGame from '..';
 import randomNumber from '../getRandomNumber/randomNumber';
 
-const question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const questionText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   let i = 2;
@@ -23,4 +23,4 @@ const getTheRightAnswer = () => {
   return [number, answer];
 };
 
-export default () => startTheGame(getTheRightAnswer, question);
+export default () => startTheGame(getTheRightAnswer, questionText);

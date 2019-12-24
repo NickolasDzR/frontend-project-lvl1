@@ -2,7 +2,7 @@ import startTheGame from '..';
 import randomNumber from '../getRandomNumber/randomNumber';
 
 
-const question = 'Find the greatest common divisor of given numbers.';
+const questionText = 'Find the greatest common divisor of given numbers.';
 
 const isGcd = (firstNumber, secondNumber) => {
   const finderDivisor = (nOne, nTwo) => {
@@ -21,5 +21,4 @@ const getTheRightAnswer = () => {
   const answer = isGcd(firstNumber, secondNumber);
   return [question, answer];
 };
-export default () => startTheGame(getTheRightAnswer, question);
-// [`${firstNumber} ${secondNumber}`, 
+export default () => startTheGame(getTheRightAnswer, questionText);

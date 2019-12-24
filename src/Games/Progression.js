@@ -6,7 +6,7 @@ const hideNumberFrom = 1;
 const hideNumberTo = 10;
 const randomNumberSmall = () => Math.ceil(Math.random(hideNumberFrom) * hideNumberTo);
 
-const question = 'What number is missing in the progression?';
+const questionText = 'What number is missing in the progression?';
 const aProgressionLenght = 8;
 
 const getTheRightAnswer = () => {
@@ -31,4 +31,4 @@ const getTheRightAnswer = () => {
   return [arrayOfNumber.join(' '), takeHiddenNum()];
 };
 
-export default () => startTheGame(getTheRightAnswer, question);
+export default () => startTheGame(getTheRightAnswer, questionText);

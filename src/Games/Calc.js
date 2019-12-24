@@ -1,7 +1,7 @@
 import startTheGame from '..';
 import randomNumber from '../getRandomNumber/randomNumber';
 
-const question = 'What is the result of the expression?';
+const questionText = 'What is the result of the expression?';
 const numerals = ['+', '-', '*'];
 
 const counter = (firstNumber, secondNumber, numOfOperator) => {
@@ -25,4 +25,4 @@ const getTheRightAnswer = () => {
 };
 
 
-export default () => startTheGame(getTheRightAnswer, question);
+export default () => startTheGame(getTheRightAnswer, questionText);
