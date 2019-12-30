@@ -1,28 +1,30 @@
-import startTheGame from '..';
+import playGame from '..';
 import randomNumber from '../getRandomNumber/randomNumber';
 
-const questionText = 'What is the result of the expression?';
-const numerals = ['+', '-', '*'];
+const gameDescription = 'What is the result of the expression?';
+const arithmeticSigns = ['+', '-', '*'];
 
-const counter = (firstNumber, secondNumber, numOfOperator) => {
-  switch (numerals[numOfOperator]) {
+const generateSolution = (firstNumber, secondNumber, typeOperator) => {
+  switch (arithmeticSigns[typeOperator]) {
     case '+':
-      return [`${firstNumber} + ${secondNumber}`, firstNumber + secondNumber];
+      return firstNumber + secondNumber;
     case '-':
-      return [`${firstNumber} - ${secondNumber}`, firstNumber - secondNumber];
+      return firstNumber - secondNumber;
     case '*':
-      return [`${firstNumber} * ${secondNumber}`, firstNumber * secondNumber];
+      return firstNumber * secondNumber;
     default:
       return false;
   }
 };
 
 const getTheRightAnswer = () => {
-  const firstNumber = randomNumber();
-  const secondNumber = randomNumber();
-  const getOperator = randomNumber() % numerals.length;
-  return counter(firstNumber, secondNumber, getOperator);
+  const firstNumber = randomNumber(1, 100);
+  const secondNumber = randomNumber(1, 100);
+  const typeOperator = randomNumber(0, 2);
+  const question = `${firstNumber} ${arithmeticSigns[typeOperator]} ${secondNumber}`;
+  const answer = generateSolution(firstNumber, secondNumber, typeOperator);
+  return [question, answer];
 };
 
 
-export default () => startTheGame(getTheRightAnswer, questionText);
+export default () => playGame(getTheRightAnswer, gameDescription);

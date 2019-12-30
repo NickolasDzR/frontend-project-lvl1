@@ -1,16 +1,16 @@
-import startTheGame from '..';
+import playGame from '..';
 import randomNumber from '../getRandomNumber/randomNumber';
 
 
-const questionText = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 
 const isEven = (number) => number % 2 === 0;
 
 const getTheRightAnswer = () => {
-  const number = randomNumber();
-  const answer = isEven(number) ? [number, 'yes'] : [number, 'no'];
-  return answer;
+  const question = randomNumber(1, 100);
+  const answer = isEven(question) ? 'yes' : 'no';
+  return [question, answer];
 };
 
-export default () => startTheGame(getTheRightAnswer, questionText);
+export default () => playGame(getTheRightAnswer, gameDescription);
