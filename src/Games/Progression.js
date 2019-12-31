@@ -1,34 +1,28 @@
 import playGame from '..';
 import randomNumber from '../getRandomNumber/randomNumber';
 
+const gameDescription = 'What number is missing in the progression?';
+const aProgressionLenght = 10;
 
 const hideNumberFrom = 1;
 const hideNumberTo = 10;
-const randomNumberSmall = () => Math.ceil(Math.random(hideNumberFrom) * hideNumberTo);
 
-const gameDescription = 'What number is missing in the progression?';
-const aProgressionLenght = 9;
+const getProgression = (fPositionArray, increaseNum, hiddenNum) => {
+  const arrayProgression = [];
+  for (let i = 0; i < aProgressionLenght; i += 1) {
+    arrayProgression.push(Math.abs(`${fPositionArray + (increaseNum * i)} `));
+  }
+  arrayProgression.splice(hiddenNum, 1, '..');
+  return arrayProgression.join(' ');
+};
 
 const getTheRightAnswer = () => {
   const fPositionArray = randomNumber(1, 100);
-  const increaseNumber = randomNumberSmall(1, 100);
-  const hiddenNumber = randomNumberSmall(1, 100);
-  const arrayNumber = [];
-
-  for (let i = 0; i < aProgressionLenght; i += 1) {
-    if (i === 0) {
-      arrayNumber.push(fPositionArray);
-    }
-    arrayNumber.push(arrayNumber[arrayNumber.length - 1] + increaseNumber);
-  }
-  const takeHiddenNum = () => {
-    if (hiddenNumber === 1) {
-      return arrayNumber[hiddenNumber + 1] - (increaseNumber + increaseNumber);
-    }
-    return arrayNumber[hiddenNumber - 2] + increaseNumber;
-  };
-  arrayNumber.splice(hiddenNumber - 1, 1, '..');
-  return [arrayNumber.join(' '), takeHiddenNum()];
+  const increaseNum = randomNumber(1, 20);
+  const hiddenNum = randomNumber(hideNumberFrom, hideNumberTo);
+  const question = getProgression(fPositionArray, increaseNum, hiddenNum);
+  const answer = fPositionArray + (increaseNum * hiddenNum);
+  return [question, answer];
 };
 
 export default () => playGame(getTheRightAnswer, gameDescription);

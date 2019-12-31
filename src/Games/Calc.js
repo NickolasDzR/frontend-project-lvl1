@@ -17,12 +17,15 @@ const generateSolution = (firstNumber, secondNumber, typeOperator) => {
   }
 };
 
+const indexOperatorFrom = 0;
+const indexOperatorTo = 2;
+
 const getTheRightAnswer = () => {
   const firstNumber = randomNumber(1, 100);
   const secondNumber = randomNumber(1, 100);
-  const typeOperator = randomNumber(0, 2);
-  const question = `${firstNumber} ${arithmeticSigns[typeOperator]} ${secondNumber}`;
-  const answer = generateSolution(firstNumber, secondNumber, typeOperator);
+  const indexOperator = randomNumber(indexOperatorFrom, indexOperatorTo);
+  const question = `${firstNumber} ${arithmeticSigns[indexOperator]} ${secondNumber}`;
+  const answer = generateSolution(firstNumber, secondNumber, indexOperator);
   return [question, answer];
 };
 

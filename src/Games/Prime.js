@@ -4,17 +4,19 @@ import randomNumber from '../getRandomNumber/randomNumber';
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
-  let i = 2;
-  if (number < i) {
+  if (number < 2) {
     return false;
   }
-  while (i < number) {
-    if (number % i === 0) {
+  const isSimple = (iter) => {
+    if (iter > number / 2) {
+      return true;
+    }
+    if (number % iter === 0) {
       return false;
     }
-    i += 1;
-  }
-  return true;
+    return isSimple(iter + 1);
+  };
+  return isSimple(2);
 };
 
 const getTheRightAnswer = () => {
