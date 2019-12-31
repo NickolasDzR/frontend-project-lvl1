@@ -23,21 +23,27 @@ $ make install
 ```
 [![asciicast](https://asciinema.org/a/ch6N9yEpWlxr8jTWlJM16Qu4I.svg)](https://asciinema.org/a/ch6N9yEpWlxr8jTWlJM16Qu4I)
 
-## $ brain-even
+## $ Игра brain-even
+
+- Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное
 
 ```sh
 $ brain-even
 ```
 [![asciicast](https://asciinema.org/a/GNKiXPeaLj5o6ekT9mulZkyk7.svg)](https://asciinema.org/a/GNKiXPeaLj5o6ekT9mulZkyk7)
 
-## $ brain-calc
+## $ Игра brain-calc
+
+- Суть игры в следующем: пользователю показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
 
 ```sh
 $ brain-calc
 ```
 [![asciicast](https://asciinema.org/a/jzJQSBKwyniEWWIWYAwxrj210.svg)](https://asciinema.org/a/jzJQSBKwyniEWWIWYAwxrj210)
 
-## $ brain-gcd
+## $ Игра brain-gcd
+
+- Суть игры в следующем: пользователю показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
 
 ```sh
 $ brain-gcd
@@ -46,12 +52,16 @@ $ brain-gcd
 
 ## $ brain-progression
 
+- Вам представляется ряд чисел, образующий арифметическую прогрессию, заменено одно число в этой прогрессии. Вам нужно отгадать, что это за число?.
+
 ```sh
 $ brain-progression
 ```
 [![asciicast](https://asciinema.org/a/ckOkTrgdduSLkxRwXjtsKc8Xg.svg)](https://asciinema.org/a/ckOkTrgdduSLkxRwXjtsKc8Xg)
 
-## $ brain-prime
+## $ Игра brain-prime
+
+- Вам нужно отгадать, просто ли число?
 
 ```sh
 $ brain-prime
