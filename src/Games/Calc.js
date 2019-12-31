@@ -4,8 +4,8 @@ import randomNumber from '../getRandomNumber/randomNumber';
 const gameDescription = 'What is the result of the expression?';
 const arithmeticSigns = ['+', '-', '*'];
 
-const generateSolution = (firstNumber, secondNumber, typeOperator) => {
-  switch (arithmeticSigns[typeOperator]) {
+const generateSolution = (firstNumber, secondNumber, indexOperator) => {
+  switch (arithmeticSigns[indexOperator]) {
     case '+':
       return firstNumber + secondNumber;
     case '-':
