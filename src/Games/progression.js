@@ -21,7 +21,7 @@ const generateGameData = () => {
   const increaseNum = randomNumber(1, 20);
   const indexHiddenNum = randomNumber(hideNumberFrom, hideNumberTo);
   const question = makeProgression(firstPositionArray, increaseNum, indexHiddenNum);
-  const answer = firstPositionArray + (increaseNum * indexHiddenNum);
+  const answer = `${firstPositionArray + (increaseNum * indexHiddenNum)}`;
   return [question, answer];
 };
 

@@ -4,11 +4,11 @@ import randomNumber from '../getRandomNumber/randomNumber';
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (firstNumber, secondNumber) => {
-  const finderDivisor = (nOne, nTwo) => {
-    if (nTwo === 0) {
-      return nOne;
+  const finderDivisor = (numOne, numTwo) => {
+    if (numTwo === 0) {
+      return numOne;
     }
-    return finderDivisor(nTwo, nOne % nTwo);
+    return finderDivisor(numTwo, numOne % numTwo);
   };
   return finderDivisor(firstNumber, secondNumber);
 };
@@ -17,7 +17,8 @@ const generateGameData = () => {
   const firstNumber = randomNumber(1, 100);
   const secondNumber = randomNumber(1, 100);
   const question = `${firstNumber} ${secondNumber}`;
-  const answer = getGcd(firstNumber, secondNumber);
+  const answer = `${getGcd(firstNumber, secondNumber)}`;
   return [question, answer];
 };
+
 export default () => playGame(generateGameData, gameDescription);

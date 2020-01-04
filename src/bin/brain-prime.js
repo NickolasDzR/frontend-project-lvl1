@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getTheRightAnswer from '../Games/Prime';
+import getTheRightAnswer from '../Games/prime';
 
 getTheRightAnswer();
