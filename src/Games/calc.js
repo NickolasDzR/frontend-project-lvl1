@@ -17,17 +17,14 @@ const generateSolution = (firstNumber, secondNumber, indexOperator) => {
   }
 };
 
-const indexOperatorFrom = 0;
-const indexOperatorTo = 2;
-
-const getTheRightAnswer = () => {
+const generateGameData = () => {
   const firstNumber = randomNumber(1, 100);
   const secondNumber = randomNumber(1, 100);
-  const indexOperator = randomNumber(indexOperatorFrom, indexOperatorTo);
+  const indexOperator = randomNumber(0, arithmeticSigns.length - 1)
   const question = `${firstNumber} ${arithmeticSigns[indexOperator]} ${secondNumber}`;
   const answer = generateSolution(firstNumber, secondNumber, indexOperator);
   return [question, answer];
 };
 
 
-export default () => playGame(getTheRightAnswer, gameDescription);
+export default () => playGame(generateGameData, gameDescription);

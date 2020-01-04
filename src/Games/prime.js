@@ -19,10 +19,10 @@ const isPrime = (number) => {
   return isSimple(2);
 };
 
-const getTheRightAnswer = () => {
+const generateGameData = () => {
   const number = randomNumber(1, 100);
   const answer = isPrime(number) === true ? 'yes' : 'no';
   return [number, answer];
 };
 
-export default () => playGame(getTheRightAnswer, gameDescription);
+export default () => playGame(generateGameData, gameDescription);
