@@ -2,14 +2,14 @@ import playGame from '..';
 import randomNumber from '../getRandomNumber/randomNumber';
 
 const gameDescription = 'What number is missing in the progression?';
-const arrayProgressionLenght = 10;
+const progressionLenght = 10;
 
 const hideNumberFrom = 1;
 const hideNumberTo = 10;
 
 const makeProgression = (fPositionArray, increaseNum, hiddenNum) => {
   const arrayProgression = [];
-  for (let i = 0; i < arrayProgressionLenght; i += 1) {
+  for (let i = 0; i < progressionLenght; i += 1) {
     arrayProgression.push(Math.abs(`${fPositionArray + (increaseNum * i)} `));
   }
   arrayProgression.splice(hiddenNum, 1, '..');
