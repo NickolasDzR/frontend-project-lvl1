@@ -17,8 +17,8 @@ const generateGameData = () => {
   const firstNumber = randomNumber(1, 100);
   const secondNumber = randomNumber(1, 100);
   const question = `${firstNumber} ${secondNumber}`;
-  const answer = `${getGcd(firstNumber, secondNumber)}`;
-  return [question, answer];
+  const answer = getGcd(firstNumber, secondNumber);
+  return [question, answer.toString()];
 };
 
 export default () => playGame(generateGameData, gameDescription);

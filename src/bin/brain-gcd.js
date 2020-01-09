@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getTheRightAnswer from '../Games/gcd';
+import generateGameData from '../Games/gcd';
 
-getTheRightAnswer();
+generateGameData();

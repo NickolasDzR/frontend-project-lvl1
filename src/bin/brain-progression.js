@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getTheRightAnswer from '../Games/progression';
+import generateGameData from '../Games/progression';
 
-getTheRightAnswer();
+generateGameData();
